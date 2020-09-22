@@ -1,0 +1,19 @@
+{% extends "inicio/inicio.html" %}
+
+{% load static %}
+
+{% block form %}
+
+<form method="POST"> {% csrf_token %}
+    {{ form.as_p }} <!-- Muesta el form como un párrafo-->
+   
+
+    <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+
+
+</form>
+
+
+{% endblock %}

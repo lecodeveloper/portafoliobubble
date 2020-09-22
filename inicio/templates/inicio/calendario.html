@@ -1,0 +1,164 @@
+
+    {% extends "inicio/base.html" %}
+
+    {% load static %}
+
+    {% block content %}
+
+    <link rel="stylesheet" href="{% static 'inicio/css/calendar.css' %}">
+    <body class="cuerpo">
+        <div class="col-10 text-center titulo">
+            <h1 class="text-dark pt-0 mx-auto">Nuestros horarios disponibles </h1>
+            <div class="border-top border-primary w-50 mx-auto my-3"></div>
+        </div>
+        <div class="container-all">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Hora:</th>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miércoles</th>
+                            <th scope="col">Jueves</th>
+                            <th scope="col">Viernes</th>
+                            <th scope="col">Sábado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="hora8">
+                            <th scope="row" id="hora8">7:00-8:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora9">
+                            <th scope="row" id="hora9">8:00-9:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora10">
+                            <th scope="row" id="hora10">9:00-10:00</th>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora11">
+                            <th scope="row" id="hora11">10:00-11:00</th>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora12">
+                            <th scope="row" id="hora12">11:00-12:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora13">
+                            <th scope="row" id="hora13">12:00-13:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora14">
+                            <th scope="row" id="hora14">13:00-14:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora15">
+                            <th scope="row" id="hora15">14:00-15:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora16">
+                            <th scope="row" id="hora16">15:00-16:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora17">
+                            <th scope="row" id="hora17">16:00-17:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora18">
+                            <th scope="row" id="hora18">17:00-18:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora19">
+                            <th scope="row" id="hora19">18:00-19:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+
+                        <tr class="hora20">
+                            <th scope="row" id="hora20">19:00-20:00</th>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="disponible">Disponible</td>
+                            <td class="ocupado">Ocupado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+   {% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        {% load static %}
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!-- Archivos propios de css static-->
+        <link rel="stylesheet" href="{% static 'inicio/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'inicio/css/fixed.css' %}">
+        <!-- Archivos propios de css static-->
+        
+        <!-- Archivos propios static-->
+        <link rel="shortcut icon" href="{% static 'inicio/img/BKLogo.png' %}">
+        <!-- Archivos propios static-->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+    <!-- --------------------Empieza el menubar--------------->
+    <body>
+        <header id="inicio">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a href="{% url 'inicio' %}" class="navbar-brand"><img src="{% static 'inicio/img/logo.png' %}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarmenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {%if request.path == '/acerca/' %}active{% endif %}" href="{% url 'acerca' %}">ACERCA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {%if request.path == '/servicios/' %}active{% endif %}" href="{% url 'servicios' %}">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#maestras">MAESTRAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {%if request.path == '/horarios/' %}active{% endif %}" href="{% url 'calendario' %}">HORARIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#contacto">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {%if request.path == '/portafolio/' %}active{% endif %}" href="{% url 'portafolio' %}">Portafolio (info)</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- --------------------Termina el menubar--------------->
+        
+        <!--Contenido que cambia-->
+        {% block content %}
+
+
+        {% endblock %}
+        <!--Contenido que cambia-->
+
+        <!-- ------Empieza el footer------------------->
+            <footer>
+                <div class="container-all bg-dark" id="contacto">
+                    <div class="row text-light text-center py-4 justify-content-center">
+
+                        <div class="col-sm-10">
+                            <p>
+                            Contáctanos para más información o visita nuestras redes sociales para seguir nuestras noticias.
+                            </p>
+                            <ul class="social pt-1">
+                                <li><a href="https://www.facebook.com/Bubble-Kids-102208561570429" target="_blank" ><img src="{% static 'inicio/img/icons/facebook.png' %}" alt="Facebook" id="facebook"></a></li>
+                                <li><a href="https://www.instagram.com/bubble_kids_/" target="_blank" ><img src="{% static 'inicio/img/icons/instagram.png' %}" alt="Instagram" id="instagram"></a></li>
+                                <li><a href="mailto:bubblekids.edu@gmail.com" target="_blank" ><img src="{% static 'inicio/img/icons/mail.png' %}" alt="Mail" id="mail"><p id="textomail">bubblekids.edu@gmail.com</p></a></li>
+                            </ul>
+                        </div>
+                        <!-- aquí tendré mi form en iniciohago un form-->
+
+                        <!-- aquí hago un form-->
+                    </div>
+                </div>
+            </footer>
+
+        <!-- ------Termina el footer------------------->
+    </body>
+</html>

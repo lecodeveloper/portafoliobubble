@@ -1,0 +1,15 @@
+{% extends "inicio/base.html" %}
+
+        {% load static %}
+
+        {% block content %}
+        <link rel="stylesheet" href="{% static 'inicio/css/acerca.css' %}">
+
+        <div class="col-12 text-center mt-5 titulo">
+            <h1 class="text-dark pt-4">¡Gracias por contactarnos!</h1>
+            <div class="linea border-top border-primary w-25 mx-auto my-3"></div>
+            <p class="lead respuesta" style="margin-bottom: 20vh;">Tu formulario se ha enviado. Te daremos una respuesta lo antes posible.</p>
+        </div>
+
+
+        {% endblock %}

@@ -1,0 +1,277 @@
+
+/* Inicio de Navigation bar */
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    color: #616971;
+}
+.navbar-brand img {
+    height: 5rem;
+    margin: -.5rem;
+    margin-left: 4vw;
+    position: relative;
+}
+
+
+.navbar {
+    width: 100% !important;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    background: rgba(22, 166, 223, 0.8) !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0,.2);
+    z-index: 2;
+}
+
+
+
+.nav-item {
+    padding-right: 2rem;
+}
+
+.nav-link {
+    color: white !important;
+    text-shadow: .1rem .1rem 3rem rgba(0, 0, 0,1);
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #f1e39d !important;
+}
+
+/* Final de Navigation bar */
+
+/* Inicio de carousel */
+/*@media only screen and (min-width: 768px) {
+    .carousel-inner {
+        height: 40rem;
+    }
+}*/
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 20rem !important;
+    bottom: 25rem !important;
+}
+
+.carousel-control-prev img{
+    position: relative;
+    height: 8vh;
+}
+
+.carousel-control-next img {
+    position: relative;
+    height: 8vh;
+}
+
+.carousel-inner {
+    max-height: 40rem!important;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0,.2);
+    z-index: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-caption h1 {
+    font-size: 3vw;
+    text-shadow: .1rem .1rem .7rem rgba(0, 0, 0,1);
+}
+
+.carousel-caption h3 {
+    font-size: 1vw;
+    text-shadow: .1rem .1rem .7rem rgba(0, 0, 0,1);
+}
+
+.bg-custom {
+    background-color: rgba(0, 0, 0,.4);
+    color: white;
+    border-radius: 1rem;
+}
+
+.border-primary {
+    border-top: .18rem solid rgb(206, 114, 183) !important;
+}
+@media only screen and (max-width: 768px) {
+    #conoce {
+        font-size: .6em;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+    position: absolute;
+    top: 10rem !important;
+    }
+    .justify-content-start {
+        position: relative;
+        top: 0vh !important;
+      }
+    .carousel3 {
+        position: absolute;
+        top: 5vh !important;
+    }
+    #facebook {
+        width: 2rem !important;
+    }
+    
+    #instagram {
+        width: 2rem !important;
+    }
+    
+    #mail {
+        width: 2.5rem !important;
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    .social li {
+        display: inline-block;
+        margin: 1rem !important
+    }
+
+    #textomail {
+        display: none;
+    }
+
+    form label {
+        text-align: center !important;
+        display: block;
+        width: 80% !important;
+    }
+
+    form input{
+        display: inline-block;
+        width: 70% !important;
+        float: center;
+    }
+
+    .inputclass2 {
+        display: block !important;
+        position: relative;
+        left: 13vw !important;
+    }
+
+    .inputclass {
+        position: relative;
+        top: 3.7vh;
+    }
+
+}
+
+.justify-content-start {
+    position: relative;
+    top: -10vh;
+  }
+
+.carousel3 {
+    position: relative;
+    top: -10vh;
+}
+
+/* Fin de carousel */
+
+/* Inicio de 2 columnas con maestras */
+
+/* Fin de 2 columnas con maestras */
+
+/* Inicio de footer*/
+
+
+.social {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.social li {
+    display: inline-block;
+    margin: 2rem;
+}
+
+#facebook {
+    width: 3rem;
+}
+
+#instagram {
+    width: 3rem;
+}
+
+#mail {
+    width: 4rem;
+    position: relative;
+    left: -3.5vw;
+    top: 3.5vh;
+}
+
+#textomail {
+    position: relative;
+    font-size: 90%;
+    top: 5vh;
+    left: -3vw;
+    color: white;
+}
+
+/* forms */
+
+form input{
+    display: inline-block;
+    width: 30%;
+    float: center;
+}
+
+form label {
+    text-align: right;
+    display: inline-block;
+    width: 20%;
+}
+
+.extender {
+    width: 60%;
+    text-align: left;
+}
+
+.extender2 {
+    width: 60%;
+    text-align: center;
+}
+
+.radiolabel {
+    position: relative;
+    left: -5vw;
+    text-align: left;
+}
+
+.inputclass {
+    display: inline;
+    position: relative;
+    left: 6vw;
+}
+
+.inputclass2 {
+    display: inline;
+    position: relative;
+    left: -11vw;
+}
+
+form label + input {
+    margin: 1vh;
+}
+form{
+    position: relative;
+    left: -3vw;
+    width: 100%;
+    margin: 0 auto;
+    display: block !important;
+}
+
+
+/* Fin de footer*/
+
+

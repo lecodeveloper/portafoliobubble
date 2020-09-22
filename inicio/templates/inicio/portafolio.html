@@ -1,0 +1,32 @@
+{% extends "inicio/base.html" %}
+
+        {% load static %}
+
+        {% block content %}
+        <link rel="stylesheet" href="{% static 'inicio/css/acerca.css' %}">
+
+        <div class="col-12 text-center mt-5 titulo">
+            <h1 class="text-dark pt-4">¡Gracias por visitar mi portafolio!</h1>
+            <div class="linea border-top border-primary w-25 mx-auto my-3"></div>
+            <p class="lead respuesta" style="margin-bottom: 10vh;">Mi nombre es Iván J. Lerma, soy el propietario de este sitio web utilizado como
+            portafolio. Si quieres ponerte en contácto conmigo, mi correo es: ivan.lerma02@gmail.com</p>
+
+            <p class="lead respuesta" style="margin-bottom: 10vh;">Este sitio web está inspirado en una empresa real y cuento con su consentimiento para
+            mostrarla. La página web tiene un diseño front-end en su mayoría boostrap, cuenta con diferentes
+            CSS personales para modificar algunos detalles. Está hecha para ser responsiva.</p>
+
+            <p class="lead respuesta" style="margin-bottom: 5vh;">El backend fue realizado con Django, el cual permite contar con total seguridad para
+                el manejo de la base de datos presente, la cual es PostgreSQL, además, Django me permitió ahorrar lineas de código al utilizar algunas
+                de sus funciones como la extensión de plantillas. Recomiendo visitar
+             la página de administrador para tener acceso a la información. Es necesario contar con los siguientes datos.</p>
+
+            <p class="lead respuesta">Usuario: visita</p>
+            <p class="lead respuesta" style="margin-bottom: 5vh;">contraseña: visita</p>
+
+            <p class="lead respuesta" style="margin-bottom: 5vh;">Con este usuario podrás modificar la base de datos. Úsalo con discreción.</p>
+
+            <p class="lead respuesta" style="margin-bottom: 5vh;"><a href="/admin/" target="_blank">Accesar a la página de administador.</a></p>
+        </div>
+
+
+        {% endblock %}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        {% load static %}
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!-- Archivos propios de css static-->
+        <link rel="stylesheet" href="{% static 'inicio/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'inicio/css/fixed.css' %}">
+        <!-- Archivos propios de css static-->
+        
+        <!-- Archivos propios static-->
+        <link rel="shortcut icon" href="{% static 'inicio/img/BKLogo.png' %}">
+        <!-- Archivos propios static-->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+    <!-- --------------------Empieza el menubar--------------->
+    <header id="inicio">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a href="{% url 'inicio' %}" class="navbar-brand"><img src="{% static 'inicio/img/logo.png' %}" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarmenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'acerca' %}">ACERCA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'servicios' %}">SERVICIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#maestras">MAESTRAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'calendario' %}">HORARIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {%if request.path == '/portafolio/' %}active{% endif %}" href="{% url 'portafolio' %}">Portafolio (info)</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- --------------------Termina el menubar--------------->
+
+    <!-- --------------------Empieza las imagenes carrusel--------------->
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <!-- Intento de scrollspy-->
+        
+
+        <!-- Intento de scrollspy-->
+
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+    <!-- --------------------Empieza el contenido del carrusel (imagenes y data)--------------->        
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="{% static 'inicio/img/carousel/1.jpg' %}" alt="want to play" class="w-100">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-8 bg-custom py-3 px-0">
+                                    <h1>Learning is one big adventure</h1>
+                                    <div class="border-top border-primary w-50 mx-auto my-3"></div>
+                                    <h3 class="pb-3 d-none d-lg-block">Poquito más texto de ejemplo</h3>
+                                    <a href="/servicios#servicio1" id="conoce" class="btn btn-primary btn-lg">CONOCER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="carousel-item">
+                    <img src="{% static 'inicio/img/carousel/2.jpeg' %}" alt="aprende a jugar" class="w-100">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-6 bg-custom py-2 px-0">
+                                    <h1>Learning is one big adventure</h1>
+                                    <div class="border-top border-primary w-50 mx-auto my-3"></div>
+                                    <h3 class="pb-3 d-none d-lg-block">Poquito más texto de ejemplo</h3>
+                                    <a href="/servicios#servicio2" id="conoce" class="btn btn-primary btn-lg">CONOCER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'inicio/img/carousel/3.jpg' %}" alt="aprende a jugar" class="w-100">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center carousel3">
+                                <div class="col-8 bg-custom py-2 px-0">
+                                    <h1>Learning is one big adventure</h1>
+                                    <div class="border-top border-primary w-50 mx-auto my-3"></div>
+                                    <h3 class="pb-3 d-none d-lg-block">Poquito más texto de ejemplo</h3>
+                                    <a href="/servicios#servicio3" id="conoce" class="btn btn-primary btn-lg">CONOCER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- ------------------Termina el contenido del carrusel (imagenes y data)--------------->
+            <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                <img src="{% static 'inicio/img/icons/prev3.png' %}" alt="">
+            </a>
+
+            <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+                <img src="{% static 'inicio/img/icons/next.png' %}" alt="">
+            </a>
+        </div>    
+    <!-- ------Empieza el codigo para botones--------------->
+    <!-- ------Termina el codigo para botones--------------->
+
+    <!-- ------Empieza la página principal------------------->
+            <div class="col-12 text-center mt-5">
+                <h1 class="text-dark pt-4">Bubble Kids</h1>
+                <div class="border-top border-primary w-25 mx-auto my-3"></div>
+                <p class="lead">"Learning is one big adventure"</p>
+
+            </div>
+    <!-- ------Termina la página principal------------------->
+
+    <!-- ------Empieza las 2 columnas de maestras------------------->
+        <div class="container" id="maestras">
+            <div class="row my-5">
+                <div class="col-md-6 my-15">
+                    <img src="{% static 'inicio/img/maestraAle.jpeg' %}" alt="Maestra Ale" class="w-100">
+                    <h3 class="my-4">Maestra Alejandra.</h3>
+                    <p>Esta sería una descripción de la maestra ale, posiblemente los estudios o alguna información relevante.</p>
+                    <a href="{% url 'acerca' %}" class="btn btn-outline-dark btn-md">Nuestra Historia</a>
+                </div>
+    
+
+        
+                <div class="col-md-6 my-15">
+                    <img src="{% static 'inicio/img/maestraMelissa.jpg' %}" alt="Maestra Melissa" class="w-100">
+                    <h3 class="my-4">Maestra Melissa.</h3>
+                    <p>Esta sería una descripción de la maestra meli, posiblemente los estudios o alguna información relevante.</p>
+                    <a href="{% url 'acerca' %}" class="btn btn-outline-dark btn-md">Nuestra Historia</a>
+                </div>
+
+            </div>
+        </div>
+    <!-- ------Termina las 2 columnas de maestras------------------->
+
+    <!-- ------Empieza el footer------------------->
+        <footer>
+            <div class="container-all bg-dark" id="contacto">
+                <div class="row text-light text-center py-4 justify-content-center">
+
+                    <div class="col-sm-10">
+                        <p>
+                        Contáctanos para más información o visita nuestras redes sociales para seguir nuestras noticias.
+                        </p>
+                        <ul class="social pt-1">
+                            <li><a href="https://www.facebook.com/Bubble-Kids-102208561570429" target="_blank" ><img src="{% static 'inicio/img/icons/facebook.png' %}" alt="Facebook" id="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/bubble_kids_/" target="_blank" ><img src="{% static 'inicio/img/icons/instagram.png' %}" alt="Instagram" id="instagram"></a></li>
+                            <li><a href="mailto:bubblekids.edu@gmail.com" target="_blank" ><img src="{% static 'inicio/img/icons/mail.png' %}" alt="Mail" id="mail"><p id="textomail">bubblekids.edu@gmail.com</p></a></li>
+                        </ul>
+                    </div>
+                    <!-- aquí hago un form-->
+                    <div class="col-sm-12">
+                        <p class="pFooter">
+                            *Llene el formulario para un proceso más rápido y fácil o puede contactarnos directamente.
+                        </p>
+                    </div>
+                    <div class="form-group col-sm-10">
+                        {% block form %}
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- ------Termina el footer------------------->
+    </body>
+</html>

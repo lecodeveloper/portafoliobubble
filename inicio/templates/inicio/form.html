@@ -1,0 +1,70 @@
+{% extends "inicio/inicio.html" %}
+
+{% load static %}
+
+{% block form %}
+<!-- Ejemplo1
+<form method="POST">  {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Guardar">
+</form>
+
+-->
+
+<!-- Ejemplo 2-->
+<form action="." method="POST"> {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Nombre*:</label>
+        <input type="text" id="name" name="name"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="tel">Teléfono:</label>
+        <input type="tel" id="tel" name="tel" placeholder="(614)1231111"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="ninos">¿Para cuántos niños desea su clase?</label>
+        <input type="text" id="ninos" name="ninos"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="edad">Edad del niño(s): </label>
+        <input type="text" id="edad" name="edad" placeholder="3,4"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="dias">¿Qué días quisiera para las clases?</label>
+        <input type="text" id="dias" name="dias"><br>
+    </div>
+
+    <div class="form-group">
+        <label for="horas">¿Cuántas horas a la semana desea agendar?</label>
+        <input type="text" id="horas" name="horas"><br><br>
+    </div>
+
+    
+    <label for="opciones" class="extender2">Seleccione las opciones que apliquen: </label><br><br>
+    <input type="checkbox" id="antes" name="opciones" value="antes" class="inputclass2">
+    <label for="opciones" class="extender">El(los) alumnos han estado en clases de inglés con anterioridad. </label><br>
+    <input type="checkbox" id="antes" name="opciones" value="antes" class="inputclass2">
+    <label for="opciones" class="extender">El alumno es de grado preescolar y ha estado o está en escuela. </label><br>
+   
+    <br>
+    <label for="desea" class="extender2">Eliga su método preferido de comunicación:</label><br><br>
+    <input type="radio" id="email" name="desea" value="email" class="inputclass">
+    <label for="email" class="radiolabel">Email </label><br>
+    <input type="radio" id="tel" name="desea" value="tel" class="inputclass">
+    <label for="tel" class="radiolabel">Teléfono </label><br>
+
+    <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
+
+{% endblock %}
